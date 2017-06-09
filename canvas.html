@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset=utf-8>
 <meta name="viewport" content="width=620">
-<title>HTML5 Demo: Canvas by lenteurman</title>
+<title>HTML5 Demo: Canvas by lenteurman, encore</title>
 <body>
 <section id="wrapper">
 <div id="carbonads-container"><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/14060/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
@@ -42,7 +43,7 @@ function buildSpinner(data) {
     var right = degreesList.slice(1, degreesList.length);
     degreesList = right.concat(left);
   }
-  
+  // Je ne comprends pas cette fonction
   function draw() {
     var c, s, e;
 
@@ -52,10 +53,13 @@ function buildSpinner(data) {
       reset();
     }
 
-    ctx.save();
+    ctx.save();// si tu le dit
 
     d = degreesList[i];
     c = Math.floor(255/degrees*i);
+    /* Et là j'aurais fait autre chose
+    comme un ctx.color = (2,50,255);
+    non ? */
     ctx.strokeStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
     ctx.lineWidth = data.size;
     ctx.beginPath();
